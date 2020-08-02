@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "sksakscluster-2e65"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "sksakscluster-2e65"
+    spec:
+      containers:
+        - name: "sksakscluster-2e65"
+          image: "suthanacr2.azurecr.io/sksakscluster"
+          ports:
+          - containerPort: 80
